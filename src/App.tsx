@@ -25,8 +25,8 @@ function App() {
             return <Highlighter text={item.name.common} textToHighlight={inputValue} />
           }}
           />
-        {!!selectedValue?.name.common && <p className="results">Selected country: {selectedValue?.name.common}</p>}
 
+        {!!selectedValue?.name.common && <p className="results">Selected country: {selectedValue?.name.common}</p>}
       </section>
 
       {/* Autocomplete using fruit mock_api */}
