@@ -1,0 +1,5 @@
+.highlighted {
+  background-color: rgba(102,175,233,.4);
+  font-weight: bold;
+  text-decoration: underline;
+}
