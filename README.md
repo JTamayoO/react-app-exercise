@@ -1,6 +1,4 @@
-# Deel Frontend Test
-
-This project contains an Autocomplete component.
+# React Exercise
 
 ## Requirements and Considerations
 

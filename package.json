@@ -1,7 +1,7 @@
 {
-  "name": "deel-frontend-test",
+  "name": "react-exercise",
   "author": "Jonathan Tamayo",
-  "description": "Deel Frontend Test",
+  "description": "React exercise Test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
