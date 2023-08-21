@@ -21,7 +21,7 @@
 | `onSelect`            | `(item: T) => void`            | Required                           | A callback function to handle the selection of a suggestion. It receives the selected item as a parameter.                                                           |
 | `getSuggestionValue`  | `(item: T) => string`          | Required                           | A function that extracts the display value from the suggestion item.                                                                                                 |
 | `renderSuggestion`    | `(item: T, inputValue: string) => React.ReactNode` | Required | A function that renders each suggestion item. It receives the suggestion item and the current input value as parameters and should return a React node.  |
-| `fetchSuggestions`    | `(value: string) => Promise<T[]>` | Required                          | A function that fetches suggestions based on user input. It receives the current input value as a parameter and should return a Promise of an array of suggestions. |
+| `fetchSuggestions`    | `(value: string, signal: AbortSignal) => Promise<T[]>` | Required                          | A function that fetches suggestions based on user input. It receives the current input value as a parameter and should return a Promise of an array of suggestions. |
 
 
 ## How to run the project

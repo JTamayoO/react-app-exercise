@@ -11,6 +11,7 @@ export type CountryEntry = {
 /**
  * Fetches country name suggestions based on the user input from an external API.
  * @param {string} value - The user input to search for country name suggestions.
+ * @param {AbortSignal} signal - The AbortSignal to handle aborting ongoing fetch requests.
  * @returns {Promise<CountryEntry[]>} A promise that resolves to an array of CountryEntry objects representing the suggestions.
  * @throws Will throw an error if there is an issue fetching the data from the API.
  */

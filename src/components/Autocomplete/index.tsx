@@ -51,7 +51,9 @@ function Autocomplete<T>({
       })
     }
 
+    // This cleanup function will be called when the component unmounts or the dependencies change
     return () => {
+      // Abort the ongoing fetch by calling the abort method on the controller
       controller.abort()
     }
   }, [debouncedInputValue, fetchSuggestions])

@@ -1,6 +1,7 @@
 /**
  * Fetches fruit name suggestions based on the user input.
  * @param {string} value - The user input to search for fruit name suggestions.
+ * @param {AbortSignal} signal - The AbortSignal to handle aborting ongoing fetch requests.
  * @returns {Promise<string[]>} A promise that resolves to an array of strings representing the fruit name suggestions.
  */
 export const fetchSuggestionsFruit = async (value: string, signal: AbortSignal): Promise<string[]> => {
