@@ -3,7 +3,7 @@
  * @param {string} value - The user input to search for fruit name suggestions.
  * @returns {Promise<string[]>} A promise that resolves to an array of strings representing the fruit name suggestions.
  */
-export const fetchSuggestionsFruit = async (value: string): Promise<string[]> => {
+export const fetchSuggestionsFruit = async (value: string, signal: AbortSignal): Promise<string[]> => {
   const fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"]
 
   return new Promise((resolve) => {

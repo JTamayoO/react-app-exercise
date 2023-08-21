@@ -14,7 +14,7 @@ interface AutocompleteProps<T> {
   onSelect: (item: T) => void
   getSuggestionValue: (item: T) => string
   renderSuggestion: (item: T, inputValue: string) => React.ReactNode
-  fetchSuggestions: (value: string) => Promise<T[]>
+  fetchSuggestions: (value: string, signal: AbortSignal ) => Promise<T[]>
 }
 
 /**
@@ -41,12 +41,18 @@ function Autocomplete<T>({
 
   useEffect(() => {
     setIsLoading(true)
+    const controller = new AbortController()
+    const signal = controller.signal
 
     if (debouncedInputValue) {
-      fetchSuggestions(debouncedInputValue).then((data) => {
+      fetchSuggestions(debouncedInputValue, signal).then((data) => {
         setSuggestions(data)
         setIsLoading(false)
       })
+    }
+
+    return () => {
+      controller.abort()
     }
   }, [debouncedInputValue, fetchSuggestions])
 

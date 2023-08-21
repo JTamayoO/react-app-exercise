@@ -14,10 +14,10 @@ export type CountryEntry = {
  * @returns {Promise<CountryEntry[]>} A promise that resolves to an array of CountryEntry objects representing the suggestions.
  * @throws Will throw an error if there is an issue fetching the data from the API.
  */
-export const fetchCountriesSuggestions = async (value: string): Promise<CountryEntry[]> => {
+export const fetchCountriesSuggestions = async (value: string, signal: AbortSignal): Promise<CountryEntry[]> => {
   try {
     const countries: CountryEntry[] = await getJSON(
-      `https://restcountries.com/v3.1/name/${value}?fields=name`
+      `https://restcountries.com/v3.1/name/${value}?fields=name`, signal
     )
 
     // Filter the countries based on the user input, since the API doesn't filter them accurately
